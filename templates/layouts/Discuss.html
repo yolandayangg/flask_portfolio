@@ -16,7 +16,7 @@
                 {{name1}}!</p>
         </div>
         <div class="col-12">
-            <form action="/discussion" id="greet" method="POST" >
+            <form action="/discuss" id="greet" method="POST" >
                 <label for="name">Recommend a Book!</label>
                 <input name="name" id="name">
                 <input type="submit" value="Reply!">
@@ -27,15 +27,15 @@
         </div>
     </div>
 
-    <h1 style="color:white;">Discuss a Read</h1>
+    <h2 style="color:white;">Discuss a Read</h2>
 
     <div class="center-block" style="margin: 2% 5% 5%; text-align:left; font-family: gilroy,serif;">
         <div class="col-12">
-            <p style="color:black;">User 1: I just finished reading _______ after having you recommend it. I really enjoyed it, especially when ___________ did ________.
-                {{name1}}!</p>
+            <p style="color:black;">User 1: I just finished reading _______ after having you recommend it. I really enjoyed it, especially when ___________ did ________. </p>
+                <p {{name1}}!</p>
         </div>
         <div class="col-12">
-            <form action="/discussion" id="greet" method="POST" >
+            <form action="/discuss2" id="greet" method="POST" >
                 <label for="name">Discuss a Read!</label>
                 <input name="name" id="name">
                 <input type="submit" value="Reply!">
@@ -49,11 +49,11 @@
 
 <!- This is turning off birds background from base.html -->
 {% block background %}
-<style>
-    body {
-        background-image: repeating-linear-gradient(to bottom right, black, whitesmoke, blanchedalmond, rgb(255, 122, 89));
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: 100% 100%;
-    }
+    <style>
+        body {
+            background-image: repeating-linear-gradient(to bottom right, black, whitesmoke, blanchedalmond, rgb(255, 122, 89));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
 {% endblock %}

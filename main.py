@@ -39,6 +39,43 @@ def yolanda():
     # starting and empty input default
     return render_template("layouts/yolanda.html", name1="World")
 
+@app.route('/discuss', methods=['GET', 'POST'])
+def discuss():
+    # submit button has been pushed
+    print("1")
+    if request.form:
+        print("2")
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            print("3")
+            return render_template("layouts/discuss.html", name1=name)
+    # starting and empty input default
+    return render_template("layouts/discuss.html", name1="_")
+def discuss2():
+    # submit button has been pushed
+    print("1")
+    if request.form:
+        print("2")
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            print("3")
+            return render_template("layouts/discuss.html", name1=name)
+    # starting and empty input default
+    return render_template("layouts/discuss.html", name1="_")
+
+@app.route('/stanley/', methods=['GET', 'POST'])
+def stanley():
+    # submit button has been pushed
+    print("1")
+    if request.form:
+        print("2")
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            print("3")
+            return render_template("layouts/stanley.html", name1=name)
+    # starting and empty input default
+    return render_template("layouts/stanley.html", name1="World")
+
 @app.route('/aboutus/', methods=['GET', 'POST'])
 def aboutus():
     # submit button has been pushed
@@ -99,19 +136,6 @@ def logicgates():
 @app.route('/favorbooks/', methods=['GET', 'POST'])
 def favorbooks():
     return render_template("layouts/favorbooks.html")
-
-@app.route('/stanley/', methods=['GET', 'POST'])
-def stanley():
-    # submit button has been pushed
-    print("1")
-    if request.form:
-        print("2")
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            print("3")
-            return render_template("layouts/stanley.html", name1=name)
-    # starting and empty input default
-    return render_template("layouts/stanley.html", name1="World")
 
 @app.route('/tianbin/', methods=['GET', 'POST'])
 def tianbin():
